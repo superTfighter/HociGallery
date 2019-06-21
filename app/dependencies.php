@@ -7,6 +7,14 @@ $container = $app->getContainer();
 
 
 
+\Cloudinary::config(array(
+    'cloud_name' => 'da2z9uwck',
+    'api_key' => '493711661824112',
+    'api_secret' => 'x_ydLqhwe2B9QGinEbk1qRTnEUs'
+));
+
+
+
 //Twig view
 $container['view'] = function($container) {
 
@@ -27,6 +35,22 @@ $container['view'] = function($container) {
     return $view;
 };
 
+$container['pdo'] = function($container){
+
+    $pdo = new \PDO("sqlite:".__DIR__."/sql/db");
+
+    return $pdo;
+};
+
+$container['auth'] = function($container){
+
+    $db = $container->pdo;
+
+    $auth = new \Delight\Auth\Auth($db);
+
+    return $auth;
+};
+
 
 
 // -----------------------------------------------------------------------------
@@ -38,6 +62,12 @@ $container['view'] = function($container) {
 $container['HomeAction'] = function($container) {
     
     return new App\Actions\HomeAction($container);
+};
+
+
+$container['AdminAction'] = function($container) {
+    
+    return new App\Actions\AdminAction($container);
 };
 
 

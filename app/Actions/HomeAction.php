@@ -13,8 +13,10 @@ class HomeAction
 
     public function index($request,$response, $args)
     {
-        
-        die();
+
+        //\Cloudinary\Uploader::upload(__DIR__ . "/../images/author.jpg");
+
+        return $this->view->render($response,'home/index.twig');
     }
 
 }

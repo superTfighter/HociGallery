@@ -12,3 +12,11 @@ $app->get('/', function ($request, $response, $args) {
 
 $app->get('/home', 'HomeAction:index')->setName('home');
 
+
+$app->group('/admin', function() use ($app){
+
+    $this->get('/login', 'AdminAction:loginPage');
+
+
+});
+

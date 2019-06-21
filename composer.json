@@ -18,7 +18,9 @@
         "twig/twig": "^2.0",
         "symfony/twig-bridge": "^3",
         "slim/twig-view": "*",
-        "psr/http-message": "*"
+        "psr/http-message": "*",
+        "delight-im/auth": "^8.1",
+        "cloudinary/cloudinary_php": "dev-master"
     },
     "require-dev": {
         "phpunit/phpunit": ">=5.0"

@@ -1,12 +1,27 @@
 {
+    "cloudinary/cloudinary_php": {
+        "version": "dev-master"
+    },
     "container-interop/container-interop": {
         "version": "1.2.0"
     },
+    "delight-im/auth": {
+        "version": "v8.1.0"
+    },
+    "delight-im/base64": {
+        "version": "v1.0.0"
+    },
+    "delight-im/cookie": {
+        "version": "v3.1.2"
+    },
+    "delight-im/db": {
+        "version": "v1.3.0"
+    },
+    "delight-im/http": {
+        "version": "v2.0.0"
+    },
     "doctrine/instantiator": {
         "version": "1.1.0"
-    },
-    "heroku/heroku-buildpack-php": {
-        "version": "v150"
     },
     "monolog/monolog": {
         "version": "1.24.0"
@@ -31,9 +46,6 @@
     },
     "phpdocumentor/type-resolver": {
         "version": "0.4.0"
-    },
-    "phpmailer/phpmailer": {
-        "version": "v6.0.7"
     },
     "phpspec/prophecy": {
         "version": "1.8.0"

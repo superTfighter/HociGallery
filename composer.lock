@@ -4,8 +4,60 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "5ef8559f0c4be2f8b632367bf815036f",
+    "content-hash": "a879c6f732ea824aec3c2d706d0c1802",
     "packages": [
+        {
+            "name": "cloudinary/cloudinary_php",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cloudinary/cloudinary_php.git",
+                "reference": "63ed8beb3989e44eb88b695b581d63e534c0789d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cloudinary/cloudinary_php/zipball/63ed8beb3989e44eb88b695b581d63e534c0789d",
+                "reference": "63ed8beb3989e44eb88b695b581d63e534c0789d",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.8.*"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src"
+                ],
+                "files": [
+                    "src/Helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Cloudinary",
+                    "homepage": "https://github.com/cloudinary/cloudinary_php/graphs/contributors"
+                }
+            ],
+            "description": "Cloudinary PHP SDK",
+            "homepage": "https://github.com/cloudinary/cloudinary_php",
+            "keywords": [
+                "cdn",
+                "cloud",
+                "cloudinary",
+                "image management",
+                "sdk"
+            ],
+            "time": "2019-06-19T11:15:04+00:00"
+        },
         {
             "name": "container-interop/container-interop",
             "version": "1.2.0",
@@ -36,6 +88,206 @@
             "description": "Promoting the interoperability of container objects (DIC, SL, etc.)",
             "homepage": "https://github.com/container-interop/container-interop",
             "time": "2017-02-14T19:40:03+00:00"
+        },
+        {
+            "name": "delight-im/auth",
+            "version": "v8.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/delight-im/PHP-Auth.git",
+                "reference": "4cd6360fc7edbbff72c9199b4f4ce3548b659232"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/delight-im/PHP-Auth/zipball/4cd6360fc7edbbff72c9199b4f4ce3548b659232",
+                "reference": "4cd6360fc7edbbff72c9199b4f4ce3548b659232",
+                "shasum": ""
+            },
+            "require": {
+                "delight-im/base64": "^1.0",
+                "delight-im/cookie": "^3.1",
+                "delight-im/db": "^1.3",
+                "ext-openssl": "*",
+                "php": ">=5.6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Delight\\Auth\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Authentication for PHP. Simple, lightweight and secure.",
+            "homepage": "https://github.com/delight-im/PHP-Auth",
+            "keywords": [
+                "Authentication",
+                "auth",
+                "login",
+                "security"
+            ],
+            "time": "2018-08-28T21:51:30+00:00"
+        },
+        {
+            "name": "delight-im/base64",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/delight-im/PHP-Base64.git",
+                "reference": "687b2a49f663e162030a8d27b32838bbe7f91c78"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/delight-im/PHP-Base64/zipball/687b2a49f663e162030a8d27b32838bbe7f91c78",
+                "reference": "687b2a49f663e162030a8d27b32838bbe7f91c78",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Delight\\Base64\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Simple and convenient Base64 encoding and decoding for PHP",
+            "homepage": "https://github.com/delight-im/PHP-Base64",
+            "keywords": [
+                "URL-safe",
+                "base-64",
+                "base64",
+                "decode",
+                "decoding",
+                "encode",
+                "encoding",
+                "url"
+            ],
+            "time": "2017-07-24T18:59:51+00:00"
+        },
+        {
+            "name": "delight-im/cookie",
+            "version": "v3.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/delight-im/PHP-Cookie.git",
+                "reference": "b3ca3233dd1e1e91efb259b9b717a1c941d67ecc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/delight-im/PHP-Cookie/zipball/b3ca3233dd1e1e91efb259b9b717a1c941d67ecc",
+                "reference": "b3ca3233dd1e1e91efb259b9b717a1c941d67ecc",
+                "shasum": ""
+            },
+            "require": {
+                "delight-im/http": "^2.0",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Delight\\Cookie\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Modern cookie management for PHP",
+            "homepage": "https://github.com/delight-im/PHP-Cookie",
+            "keywords": [
+                "cookie",
+                "cookies",
+                "csrf",
+                "http",
+                "same-site",
+                "samesite",
+                "xss"
+            ],
+            "time": "2018-10-11T17:27:45+00:00"
+        },
+        {
+            "name": "delight-im/db",
+            "version": "v1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/delight-im/PHP-DB.git",
+                "reference": "7a03da20b5592fa445c10cd6c7245d51037292c4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/delight-im/PHP-DB/zipball/7a03da20b5592fa445c10cd6c7245d51037292c4",
+                "reference": "7a03da20b5592fa445c10cd6c7245d51037292c4",
+                "shasum": ""
+            },
+            "require": {
+                "ext-pdo": "*",
+                "php": ">=5.6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Delight\\Db\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Safe and convenient SQL database access in a driver-agnostic way",
+            "homepage": "https://github.com/delight-im/PHP-DB",
+            "keywords": [
+                "database",
+                "mysql",
+                "pdo",
+                "pgsql",
+                "postgresql",
+                "sql",
+                "sqlite"
+            ],
+            "time": "2018-08-28T18:23:01+00:00"
+        },
+        {
+            "name": "delight-im/http",
+            "version": "v2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/delight-im/PHP-HTTP.git",
+                "reference": "0a19a72a7eac8b1301aa972fb20cff494ac43e09"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/delight-im/PHP-HTTP/zipball/0a19a72a7eac8b1301aa972fb20cff494ac43e09",
+                "reference": "0a19a72a7eac8b1301aa972fb20cff494ac43e09",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Delight\\Http\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Hypertext Transfer Protocol (HTTP) utilities for PHP",
+            "homepage": "https://github.com/delight-im/PHP-HTTP",
+            "keywords": [
+                "headers",
+                "http",
+                "https"
+            ],
+            "time": "2016-07-21T15:05:01+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -160,72 +412,6 @@
                 "routing"
             ],
             "time": "2018-02-13T20:26:39+00:00"
-        },
-        {
-            "name": "phpmailer/phpmailer",
-            "version": "v6.0.7",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/PHPMailer/PHPMailer.git",
-                "reference": "0c41a36d4508d470e376498c1c0c527aa36a2d59"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/0c41a36d4508d470e376498c1c0c527aa36a2d59",
-                "reference": "0c41a36d4508d470e376498c1c0c527aa36a2d59",
-                "shasum": ""
-            },
-            "require": {
-                "ext-ctype": "*",
-                "ext-filter": "*",
-                "php": ">=5.5.0"
-            },
-            "require-dev": {
-                "doctrine/annotations": "1.2.*",
-                "friendsofphp/php-cs-fixer": "^2.2",
-                "phpdocumentor/phpdocumentor": "2.*",
-                "phpunit/phpunit": "^4.8 || ^5.7",
-                "zendframework/zend-eventmanager": "3.0.*",
-                "zendframework/zend-i18n": "2.7.3",
-                "zendframework/zend-serializer": "2.7.*"
-            },
-            "suggest": {
-                "ext-mbstring": "Needed to send email in multibyte encoding charset",
-                "hayageek/oauth2-yahoo": "Needed for Yahoo XOAUTH2 authentication",
-                "league/oauth2-google": "Needed for Google XOAUTH2 authentication",
-                "psr/log": "For optional PSR-3 debug logging",
-                "stevenmaguire/oauth2-microsoft": "Needed for Microsoft XOAUTH2 authentication",
-                "symfony/polyfill-mbstring": "To support UTF-8 if the Mbstring PHP extension is not enabled (^1.2)"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "PHPMailer\\PHPMailer\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "LGPL-2.1"
-            ],
-            "authors": [
-                {
-                    "name": "Jim Jagielski",
-                    "email": "jimjag@gmail.com"
-                },
-                {
-                    "name": "Marcus Bointon",
-                    "email": "phpmailer@synchromedia.co.uk"
-                },
-                {
-                    "name": "Andy Prevost",
-                    "email": "codeworxtech@users.sourceforge.net"
-                },
-                {
-                    "name": "Brent R. Matzelle"
-                }
-            ],
-            "description": "PHPMailer is a full-featured email creation and transfer class for PHP",
-            "time": "2019-02-01T15:04:28+00:00"
         },
         {
             "name": "pimple/pimple",
@@ -852,16 +1038,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v2.11.2",
+            "version": "v2.11.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "84a463403da1c81afbcedda8f0e788c78bd25a79"
+                "reference": "699ed2342557c88789a15402de5eb834dedd6792"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/84a463403da1c81afbcedda8f0e788c78bd25a79",
-                "reference": "84a463403da1c81afbcedda8f0e788c78bd25a79",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/699ed2342557c88789a15402de5eb834dedd6792",
+                "reference": "699ed2342557c88789a15402de5eb834dedd6792",
                 "shasum": ""
             },
             "require": {
@@ -915,7 +1101,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2019-06-05T11:17:07+00:00"
+            "time": "2019-06-18T15:37:11+00:00"
         }
     ],
     "packages-dev": [
@@ -974,50 +1160,6 @@
                 "instantiate"
             ],
             "time": "2019-03-17T17:37:11+00:00"
-        },
-        {
-            "name": "heroku/heroku-buildpack-php",
-            "version": "v157",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/heroku/heroku-buildpack-php.git",
-                "reference": "62a691bf5937d35a7236c581734352208037d710"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/heroku/heroku-buildpack-php/zipball/62a691bf5937d35a7236c581734352208037d710",
-                "reference": "62a691bf5937d35a7236c581734352208037d710",
-                "shasum": ""
-            },
-            "bin": [
-                "bin/heroku-hhvm-apache2",
-                "bin/heroku-hhvm-nginx",
-                "bin/heroku-php-apache2",
-                "bin/heroku-php-nginx"
-            ],
-            "type": "library",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "David Zuelke",
-                    "email": "dz@heroku.com"
-                }
-            ],
-            "description": "Toolkit for starting a PHP application locally, with or without foreman, using the same config for PHP/HHVM and Apache2/Nginx as on Heroku",
-            "homepage": "https://github.com/heroku/heroku-buildpack-php",
-            "keywords": [
-                "apache",
-                "apache2",
-                "foreman",
-                "heroku",
-                "hhvm",
-                "nginx",
-                "php"
-            ],
-            "time": "2019-06-13T20:23:59+00:00"
         },
         {
             "name": "myclabs/deep-copy",
@@ -1638,16 +1780,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "8.2.2",
+            "version": "8.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "24b6cfcec34c1167ee1d90b7cb22bee324af319f"
+                "reference": "f67ca36860ebca7224d4573f107f79bd8ed0ba03"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/24b6cfcec34c1167ee1d90b7cb22bee324af319f",
-                "reference": "24b6cfcec34c1167ee1d90b7cb22bee324af319f",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/f67ca36860ebca7224d4573f107f79bd8ed0ba03",
+                "reference": "f67ca36860ebca7224d4573f107f79bd8ed0ba03",
                 "shasum": ""
             },
             "require": {
@@ -1717,7 +1859,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2019-06-15T07:25:54+00:00"
+            "time": "2019-06-19T12:03:56+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
@@ -2247,16 +2389,16 @@
         },
         {
             "name": "sebastian/type",
-            "version": "1.1.1",
+            "version": "1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/type.git",
-                "reference": "b2a7f9aac51ce18cd7ac8b31e37c8ce5646fc741"
+                "reference": "251ca774d58181fe1d3eda68843264eaae7e07ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/type/zipball/b2a7f9aac51ce18cd7ac8b31e37c8ce5646fc741",
-                "reference": "b2a7f9aac51ce18cd7ac8b31e37c8ce5646fc741",
+                "url": "https://api.github.com/repos/sebastianbergmann/type/zipball/251ca774d58181fe1d3eda68843264eaae7e07ef",
+                "reference": "251ca774d58181fe1d3eda68843264eaae7e07ef",
                 "shasum": ""
             },
             "require": {
@@ -2289,7 +2431,7 @@
             ],
             "description": "Collection of value objects that represent the types of the PHP type system",
             "homepage": "https://github.com/sebastianbergmann/type",
-            "time": "2019-06-08T04:53:27+00:00"
+            "time": "2019-06-19T06:39:12+00:00"
         },
         {
             "name": "sebastian/version",
@@ -2428,7 +2570,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "cloudinary/cloudinary_php": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
