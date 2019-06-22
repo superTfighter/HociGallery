@@ -5,10 +5,23 @@ use Psr\Http\Message\ResponseInterface as Response;
 
 // Routes
 
-$app->get('/', function ($request, $response, $args) {
-    return $response->withRedirect($this->router->pathFor('home'));
+$app->get('/', 'HomeAction:index')->setName('home');
+
+$app->group('/adminlogin', function() use ($app){
+
+    $this->get('/', 'AdminAction:loginPage')->setName('login');
+
+    $this->post('/', 'AdminAction:loginPost')->setName('loginPost');
+
 });
 
 
-$app->get('/home', 'HomeAction:index')->setName('home');
+
+
+$app->group('/admin', function() use ($container){
+
+    $this->get('/home', 'AdminAction:home')->setName('adminHome');
+    $this->get('/upload','AdminAction:getUpload')->setName('adminUpload');
+    $this->post('/upload','AdminAction:uploadToDBAndApi')->setName('uploadToApi');
+})->add(new \App\Middlewares\AuthenticationMiddleware($container));
 

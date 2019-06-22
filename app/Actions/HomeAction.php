@@ -13,8 +13,12 @@ class HomeAction
 
     public function index($request,$response, $args)
     {
-        
-        die();
+        $getImages = $this->ImageRepository->getImages();
+
+        $images = array_slice($getImages,0,9);
+
+
+        return $this->view->render($response,'home/index.twig',['images' => $images]);
     }
 
 }
