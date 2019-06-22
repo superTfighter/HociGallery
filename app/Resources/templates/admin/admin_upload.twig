@@ -1,0 +1,49 @@
+{% extends 'admin_main.twig' %}
+
+{% block stylesheets %}{% endblock %}
+
+{% block script_include %}{% endblock %}
+
+{% block page_header %} 
+
+{% endblock %}
+
+{% block page_content %}
+
+			<section class="ftco-section bg-light ftco-bread">
+				<div class="container">
+					<div class="row no-gutters slider-text align-items-center">
+	          <div class="col-md-9 ftco-animate">
+	            <h1 class="mb-3 bread">Kép feltöltés</h1>
+
+                <form method="post" enctype="multipart/form-data" action="{{ path_for('uploadToApi') }}">
+                    <!-- upload of a single file -->
+                    <p>
+                        <label>Name </label><br/>
+                        <input type="text" name="name"/>
+                    </p>
+
+                    <p>
+                        <label>Add file (single): </label><br/>
+                        <input type="file" name="file"/>
+                    </p>
+
+                    <button  type="submit">Upload</button>
+
+
+
+                </form>
+
+                </div>
+                    </div>
+                </div>
+			</section>
+
+
+
+
+
+
+
+
+{% endblock %}

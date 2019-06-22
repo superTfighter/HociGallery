@@ -13,10 +13,12 @@ class HomeAction
 
     public function index($request,$response, $args)
     {
+        $getImages = $this->ImageRepository->getImages();
 
-        //\Cloudinary\Uploader::upload(__DIR__ . "/../images/author.jpg");
+        $images = array_slice($getImages,0,9);
 
-        return $this->view->render($response,'home/index.twig');
+
+        return $this->view->render($response,'home/index.twig',['images' => $images]);
     }
 
 }

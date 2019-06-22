@@ -13,19 +13,54 @@ class AdminAction
 
     public function loginPage($request,$response, $args)
     {
-        
-        //$this->register('xeltomi71@gmail.com','asdasd123','admin');
-        //$this->login('xeltomi71@gmail.com','asdasd123');
-
         if ($this->container->auth->isLoggedIn()) {
-            echo 'User is signed in';
+
+            return $response->withRedirect($this->router->pathFor('adminHome'));
+
         }
         else {
-            echo 'User is not signed in yet';
+            return $this->view->render($response,'admin/login.twig');
         }
 
+        return $this->view->render($response,'admin/login.twig');
     }
 
+    public function loginPost($request,$response, $args)
+    {
+
+        $form_data = $request->getParams();
+        $name = $form_data['email'];
+        $pws = $form_data['pass'];
+
+        $this->login($name,$pws);
+
+        return $response->withRedirect($this->router->pathFor('adminHome')); 
+    }
+
+    public function home($request,$response, $args)
+    { 
+
+        return $this->view->render($response,'admin/admin_home.twig');
+    }
+
+    public function getUpload($request,$response, $args)
+    { 
+
+        return $this->view->render($response,'admin/admin_upload.twig');
+    }
+
+    public function uploadToDBAndApi($request,$response, $args)
+    {
+        $file = $request->getUploadedFiles()['file'];
+        $name = $request->getParams()['name'];
+        
+        $url = \Cloudinary\Uploader::upload($file->file)['url'];
+        
+        $this->ImageFactory->imageToDB($name,$url);
+
+        return $response->withRedirect($this->router->pathFor('adminUpload')); 
+
+    }
 
 
     private function login($email,$psw)

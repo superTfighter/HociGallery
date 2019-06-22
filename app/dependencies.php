@@ -26,6 +26,7 @@ $container['view'] = function($container) {
     ]);
 
     $basePath = rtrim(str_ireplace('index.php', '', $container['request']->getUri()->getBasePath()), '/');
+    $view->getEnvironment()->addGlobal("current_path", $container["request"]->getUri()->getPath());
     $view->addExtension(new Slim\Views\TwigExtension($container['router'], $basePath));
     $view->addExtension(new Twig_Extension_Debug());
 
@@ -37,9 +38,11 @@ $container['view'] = function($container) {
 
 $container['pdo'] = function($container){
 
+    
     $pdo = new \PDO("sqlite:".__DIR__."/sql/db");
+    $db = \Delight\Db\PdoDatabase::fromPdo($pdo, true);
 
-    return $pdo;
+    return $db;
 };
 
 $container['auth'] = function($container){
@@ -70,7 +73,11 @@ $container['AdminAction'] = function($container) {
     return new App\Actions\AdminAction($container);
 };
 
+$container['ImageRepository'] = function($container) {
+    return new App\Repositories\ImageRepository($container);
+};
 
-/*$container['HomeRepository'] = function($container) {
-    return new \app\Repositories\HomeRepository($container);
-};*/
+
+$container['ImageFactory'] = function($container) {
+    return new App\Factories\ImageFactory($container);
+};
