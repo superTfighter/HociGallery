@@ -7298,10 +7298,10 @@ a {
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
   transition: .3s all ease;
-  color: #f67e7d; }
+  color: #009ADA; }
   a:hover, a:focus {
     text-decoration: none;
-    color: #f67e7d;
+    color: #009ADA;
     outline: none !important; }
 
 h1, h2, h3, h4, h5,
@@ -7331,7 +7331,7 @@ h1, h2, h3, h4, h5,
   right: 0;
   overflow-y: hidden;
   z-index: 1001;
-  background: #f67e7d;
+  background: #009ADA;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
@@ -7462,7 +7462,7 @@ h1, h2, h3, h4, h5,
           -moz-border-radius: 50%;
           -ms-border-radius: 50%;
           border-radius: 50%;
-          background: #f46665; }
+          background: #009ADA; }
           #colorlib-aside .colorlib-footer ul li a:hover, #colorlib-aside .colorlib-footer ul li a:active, #colorlib-aside .colorlib-footer ul li a:focus {
             text-decoration: none;
             outline: none;
@@ -7719,7 +7719,7 @@ h1, h2, h3, h4, h5,
       -ms-transform: translateY(-50%);
       transform: translateY(-50%);
       margin-top: -10px;
-      color: #f67e7d !important;
+      color: #009ADA !important;
       -moz-transition: all 0.7s ease;
       -o-transition: all 0.7s ease;
       -webkit-transition: all 0.7s ease;
@@ -7932,20 +7932,20 @@ h1, h2, h3, h4, h5,
   .btn:hover, .btn:active, .btn:focus {
     outline: none; }
   .btn.btn-primary {
-    background: #f67e7d;
-    border: 1px solid #f67e7d;
+    background: #009ADA;
+    border: 1px solid #009ADA;
     color: #fff; }
     .btn.btn-primary:hover {
-      border: 1px solid #f67e7d;
+      border: 1px solid #009ADA;
       background: transparent;
-      color: #f67e7d; }
+      color: #009ADA; }
     .btn.btn-primary.btn-outline-primary {
-      border: 1px solid #f67e7d;
+      border: 1px solid #009ADA;
       background: transparent;
-      color: #f67e7d; }
+      color: #009ADA; }
       .btn.btn-primary.btn-outline-primary:hover {
         border: 1px solid transparent;
-        background: #f67e7d;
+        background: #009ADA;
         color: #fff; }
   .btn.btn-white {
     background: #fff;
@@ -7953,7 +7953,7 @@ h1, h2, h3, h4, h5,
     color: #000000; }
     .btn.btn-white:hover, .btn.btn-white:focus, .btn.btn-white:active {
       border: 1px solid #fff;
-      color: #f67e7d; }
+      color: #009ADA; }
     .btn.btn-white.btn-outline-white {
       border-color: rgba(255, 255, 255, 0.8);
       background: none;
@@ -7966,7 +7966,7 @@ h1, h2, h3, h4, h5,
       .btn.btn-white.btn-outline-white:hover, .btn.btn-white.btn-outline-white:focus, .btn.btn-white.btn-outline-white:active {
         background: #fff;
         border-color: #fff;
-        color: #f67e7d; }
+        color: #009ADA; }
 
 .ftco-bread .breadcrumbs {
   text-transform: uppercase;
@@ -8068,12 +8068,13 @@ textarea.form-control {
 
 .ftco-footer {
   position: absolute;
+  right: 0;
   bottom: 0;
-  width: 100%;
-  height: 2.5rem;
-  font-size: 14px;
-  background: #242423;
-  padding: 6em 0; }
+  left: 0;
+  background-color: #cc0000;
+  text-align: right;
+  font-size:10px;
+  background: #242423;}
   .ftco-footer .ftco-footer-logo {
     text-transform: uppercase;
     letter-spacing: .1em; }
@@ -8114,12 +8115,12 @@ textarea.form-control {
   .footer-small-nav > li a {
     margin: 0 10px 10px 0; }
     .footer-small-nav > li a:hover, .footer-small-nav > li a:focus {
-      color: #f67e7d; }
+      color: #009ADA; }
 
 .media .ftco-icon {
   width: 100px; }
   .media .ftco-icon span {
-    color: #f67e7d; }
+    color: #009ADA; }
 
 .ftco-social {
   padding: 0;
@@ -8210,7 +8211,7 @@ textarea.form-control {
   background: #f8f9fa !important; }
 
 .bg-primary {
-  background: #f67e7d !important; }
+  background: #009ADA !important; }
 
 .image-popup {
   cursor: -webkit-zoom-in;
@@ -8261,7 +8262,7 @@ textarea.form-control {
     margin-bottom: 4px;
     font-weight: 400; }
     .block-27 ul li a, .block-27 ul li span {
-      border: 1px solid #f67e7d;
+      border: 1px solid #009ADA;
       text-align: center;
       display: inline-block;
       width: 40px;
@@ -8269,7 +8270,7 @@ textarea.form-control {
       line-height: 40px;
       border-radius: 50%; }
     .block-27 ul li.active a, .block-27 ul li.active span {
-      background: #f67e7d;
+      background: #009ADA;
       color: #fff;
       border: 1px solid transparent; }
 
@@ -8300,7 +8301,7 @@ textarea.form-control {
     .block-21 .text .heading a {
       color: #000000; }
       .block-21 .text .heading a:hover, .block-21 .text .heading a:active, .block-21 .text .heading a:focus {
-        color: #f67e7d; }
+        color: #009ADA; }
   .block-21 .text .meta > div {
     display: inline-block;
     font-size: 12px;

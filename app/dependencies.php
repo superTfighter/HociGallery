@@ -62,9 +62,9 @@ $container['auth'] = function($container){
 //Actions
 
 
-$container['HomeAction'] = function($container) {
+$container['VisitorAction'] = function($container) {
     
-    return new App\Actions\HomeAction($container);
+    return new App\Actions\VisitorAction($container);
 };
 
 
