@@ -150,6 +150,8 @@
 
 		} , { offset: '95%' } );
 	};
+
+	$.animateAnimated = contentWayPoint;
 	contentWayPoint();
 
 

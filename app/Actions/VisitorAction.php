@@ -41,4 +41,37 @@ class VisitorAction
         return $response->withJson($data);
     
     }
+
+
+    public function getImagesJsonOffset($request,$response,$args)
+    {
+
+        $offset = $args['offset'];
+        $getImages = $this->ImageRepository->getImages();
+        $images = Array();
+
+        //Offset from and to values
+        $from = 0 + (int)$offset;
+        $to = 9 + (int)$offset;
+        $i = 0;
+
+        foreach($getImages as $image)
+        {
+
+            if($i >= $from && $i < $to )
+            {
+                array_push($images,$image);
+            }
+            $i++;
+            
+        }
+
+        $data['data'] = $images;
+
+        return $response->withJson($data);
+    
+    }
+
+
+    
 }

@@ -11,6 +11,8 @@ $app->get('/gallery','VisitorAction:getGallery')->setName('gallery');
 
 $app->get('/images_json','VisitorAction:getImagesJson')->setName('getImages_Json');
 
+$app->get('/images_json/{offset}', 'VisitorAction:getImagesJsonOffset')->setName('getImages_Json_Offset');
+
 
 $app->group('/adminlogin', function() use ($app){
 
