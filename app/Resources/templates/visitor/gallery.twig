@@ -10,7 +10,6 @@
 
 {% block page_content %}
 
-
 <section class="ftco-section-2">
 	<div class="photograhy">
 		<div class="row no-gutters" id="picture-container">
@@ -30,13 +29,14 @@
 
 <script>
 
+$(window).load(function(){
 const root = document.querySelector('#picture-container');
 const button = document.getElementById('fetchNext');
 
 let pictureOffset = 0;
 let pictureNumber = {{ imageCount }};
 
-if(pictureOffset >= pictureNumber)
+if(pictureOffset + 9 >= pictureNumber)
 {
 	button.style.visibility = "hidden";
 }
@@ -90,12 +90,14 @@ fetchData(url)
 			root.appendChild(picture);
 		});
 
-		//Add listener to button click e
+		$.main();
+
+		//Add listener to button click 
 		button.addEventListener('click', () => {
 			
 			pictureOffset += 9;
 			
-			if(pictureOffset >= pictureNumber)
+			if(pictureOffset + 9 >= pictureNumber)
 			{
 				button.style.visibility = "hidden";
 			}
@@ -110,14 +112,13 @@ fetchData(url)
 					root.appendChild(picture);
 				});
 
-				//$.animateAnimated;
-				$.main();
+				$.main();	
 			});
 
 		});
-
-
 	})
+});
+
 
 </script>
 
