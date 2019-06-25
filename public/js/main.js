@@ -1,4 +1,4 @@
- $.main = function(){
+$.main = function(){
 	AOS.init({
  	duration: 800,
  	easing: 'slide'
