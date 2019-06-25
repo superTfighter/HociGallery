@@ -1,0 +1,126 @@
+{% extends 'main.twig' %}
+
+{% block stylesheets %}{% endblock %}
+
+{% block script_include %}{% endblock %}
+
+{% block page_header %} 
+
+{% endblock %}
+
+{% block page_content %}
+
+
+<section class="ftco-section-2">
+	<div class="photograhy">
+		<div class="row no-gutters" id="picture-container">
+
+			<!-- Here will be those pictures -->
+
+		</div>
+	</div>
+
+	<div style="text-align: center;" class="nextButtonDiv">
+   			<button type="button" class="btn btn-primary" id="fetchNext" align="center" >More...</button>
+	</div>
+
+	
+</section>
+
+
+<script>
+
+const root = document.querySelector('#picture-container');
+const button = document.getElementById('fetchNext');
+
+let pictureOffset = 0;
+let pictureNumber = {{ imageCount }};
+
+if(pictureOffset >= pictureNumber)
+{
+	button.style.visibility = "hidden";
+}
+
+function createPicture(url, name){
+
+	const pictureColumn = document.createElement('div');
+	pictureColumn.className = 'col-md-4 ftco-animate';
+
+	const pictureLink = document.createElement('a');
+
+	pictureLink.href= url;
+	pictureLink.style.backgroundImage = 'url(' + url + ')';
+	pictureLink.className = 'photography-entry img image-popup d-flex justify-content-center align-items-center';
+
+	const pictureOverlay = document.createElement('div');
+	pictureOverlay.className = 'overlay';
+
+	const pictureTextContainer = document.createElement('div');
+	pictureTextContainer.className = 'text text-center';
+
+	const pictureH3 = document.createElement('h3');
+	pictureH3.textContent = name;
+
+	pictureTextContainer.appendChild(pictureH3);
+
+	pictureLink.appendChild(pictureOverlay);
+	pictureLink.appendChild(pictureTextContainer);
+
+	pictureColumn.appendChild(pictureLink);
+
+	return pictureColumn;
+}
+
+async function fetchData(url){
+	const result = await fetch(url)
+		.then( res => res.json())
+
+	return result.data;
+}
+
+
+var turl = '{{ path_for("getImages_Json_Offset", {"offset" : "data" }) }}';
+var url = turl.replace("data", pictureOffset); 
+
+fetchData(url)
+	.then( data => {
+		
+		data.forEach((pictureObj) => {
+			const picture = createPicture(pictureObj.url, pictureObj.name);
+			root.appendChild(picture);
+		});
+
+		//Add listener to button click e
+		button.addEventListener('click', () => {
+			
+			pictureOffset += 9;
+			
+			if(pictureOffset >= pictureNumber)
+			{
+				button.style.visibility = "hidden";
+			}
+
+			var turl = '{{ path_for("getImages_Json_Offset", {"offset" : "data" }) }}';
+			var url = turl.replace("data", pictureOffset); 
+
+			fetchData(url).then( data => {
+				
+				data.forEach((pictureObj) => {
+					const picture = createPicture(pictureObj.url, pictureObj.name);
+					root.appendChild(picture);
+				});
+
+				//$.animateAnimated;
+				$.main();
+			});
+
+		});
+
+
+	})
+
+</script>
+
+{% endblock %}
+
+

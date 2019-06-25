@@ -1,4 +1,5 @@
- AOS.init({
+ $.main = function(){
+	AOS.init({
  	duration: 800,
  	easing: 'slide'
  });
@@ -150,6 +151,8 @@
 
 		} , { offset: '95%' } );
 	};
+
+	//$.animateAnimated = contentWayPoint;
 	contentWayPoint();
 
 
@@ -188,4 +191,7 @@
 
 
 })(jQuery);
+}
+
+$.main();
 
