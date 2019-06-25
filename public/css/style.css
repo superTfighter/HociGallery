@@ -8592,3 +8592,14 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+
+
+
+
+    /*Custom made by Tomi */
+
+.nextButtonDiv {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+

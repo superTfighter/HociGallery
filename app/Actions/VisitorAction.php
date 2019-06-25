@@ -24,10 +24,10 @@ class VisitorAction
     public function getGallery($request,$response,$args)
     {
 
-        $getImages = $this->ImageRepository->getImages();
+        $imageNumber = count($this->ImageRepository->getImages());
 
 
-        return $this->view->render($response,'visitor/asdasd.twig',['images' => $getImages]);
+        return $this->view->render($response,'visitor/gallery.twig', ['imageCount' => $imageNumber]);
     }
 
 
